@@ -35,3 +35,5 @@ def test_sentences_counter(text, expected):
         num_sentences = len(sentences)
         return num_sentences
     assert sentences_counter(text) == expected
+
+

@@ -13,12 +13,11 @@ def word_counter(text):
     return print("Кількість слів у файлі:", num_words)
 
 # визначаємо кількість речень
+
 def sentences_counter(text):
-    sentences = re.findall(r'[\w\s]*[\.\?!]', text)
+    sentences = re.findall(r'[\w\s]*[\.\?!]+|[\w\s]*\.{3}', text)
     num_sentences = len(sentences)
     return print("Кількість речень у файлі:", num_sentences)
-
-
 
 word_counter(file_text())
 sentences_counter(file_text())
